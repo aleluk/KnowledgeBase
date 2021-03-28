@@ -65,6 +65,3 @@ class FeatureUpdateError(models.Model):
     def __str__(self):
         return f"{self.name}"
 
-
-class TEST(models.Model):
-    name = models.CharField(max_length=50)
