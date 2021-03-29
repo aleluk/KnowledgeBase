@@ -12,7 +12,7 @@ class UpdateSecurity(models.Model):
         return f"{self.name}"
 
 
-class FeatureUpdate(models.Model):
+class WindowsUpdate(models.Model):
     # Update & Security node: level 1
     name = models.CharField(max_length=50)
     update_security = models.ForeignKey(UpdateSecurity, on_delete=models.CASCADE, null=True)
@@ -21,10 +21,10 @@ class FeatureUpdate(models.Model):
         return f"{self.name}"
 
 
-class WindowsUpdate(models.Model):
+class FeatureUpdate(models.Model):
     # Update & Security node: level 1
     name = models.CharField(max_length=50)
-    update_security = models.ForeignKey(UpdateSecurity, on_delete=models.CASCADE, null=True)
+    update_security = models.ForeignKey(UpdateSecurity, on_delete=models.CASCADE, null= True)
 
     def __str__(self):
         return f"{self.name}"

@@ -25,8 +25,8 @@ class WindowsUpdateTemplateView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["about_1"] = WindowsUpdate.objects.get(id=1)
-        context["errors_1"] = WindowsUpdate.objects.get(id=2)
+        context["about_1"] = WindowsUpdate.objects.get(name="About")
+        context["errors_1"] = WindowsUpdate.objects.get(name="Errors")
         return context
 
 
