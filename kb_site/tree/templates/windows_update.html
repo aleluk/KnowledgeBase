@@ -1,8 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-    <p>this is a TEMPLATE VIEW</p>
         <ul style="list-style-type:none">
-            <li>{{ about_1 }}</li>
+            <li><a href="{% url 'about_one' %}">About</a></li>
             <li>{{ errors_1 }}</li>
         </ul>
 {% endblock %}

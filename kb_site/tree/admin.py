@@ -1,8 +1,8 @@
 from django.contrib import admin
 from .models import (
     UpdateSecurity,
-    WindowsUpdate,
-    FeatureUpdate,
+    # WindowsUpdate,
+    # FeatureUpdate,
     # WindowsUpdateError,
     # FeatureUpdateError,
     # AboutWindowsUpdate,
@@ -11,8 +11,8 @@ from .models import (
 
 # Register your models here.
 admin.site.register(UpdateSecurity)
-admin.site.register(WindowsUpdate)
-admin.site.register(FeatureUpdate)
+# admin.site.register(WindowsUpdate)
+# admin.site.register(FeatureUpdate)
 # admin.site.register(WindowsUpdateError)
 # admin.site.register(FeatureUpdateError)
 # admin.site.register(AboutWindowsUpdate)
