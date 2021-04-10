@@ -61,6 +61,14 @@ class UpdateSecurity(models.Model):
         return f"{self.name}"
 
 
+# class Index(models.Model):
+#     name = models.CharField(max_length=50)
+#     update_security_var = models.ForeignKey(UpdateSecurity, on_delete=models.CASCADE, null=True)
+#     apps_var = models.ForeignKey(Apps, on_delete=models.CASCADE, null=True)
+#     tcn_var = models.ForeignKey(TCN, on_delete=models.CASCADE, null=True)
+#     system_var = models.ForeignKey(System, on_delete=models.CASCADE, null=True)
+#     network_internet_var = models.ForeignKey(NetworkInternet, on_delete=models.CASCADE, null=True)
+#     devices_var = models.ForeignKey(Devices, on_delete=models.CASCADE, null=True)
 
 
 

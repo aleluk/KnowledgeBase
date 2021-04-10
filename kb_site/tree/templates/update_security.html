@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-        <ul style="list-style-type:none">
-             <p><a href="{% url 'antivirus' %}">Antivirus</a></p>
-             <p><a href="{% url 'bitlocker' %}">Bitlocker</a></p>
-             <p><a href="{% url 'feature_update' %}">Feature Update</a></p>
-             <p><a href="{% url 'windows_update' %}">Windows Update</a></p>
-        </ul>
+    <ul class="menu menu-hover-lines" style="list-style-type:none">
+         <p><a href="{% url 'antivirus' %}">Antivirus</a></p>
+         <p><a href="{% url 'bitlocker' %}">Bitlocker</a></p>
+         <p><a href="{% url 'feature_update' %}">Feature Update</a></p>
+         <p><a href="{% url 'windows_update' %}">Windows Update</a></p>
+    </ul>
 {% endblock %}

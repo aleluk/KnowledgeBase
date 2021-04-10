@@ -1,26 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Knowledge Base</title>
-    <link rel="stylesheet" href="../static/stylesheet.css">
-</head>
-<body>
-    <ul class="menu menu-hover-lines" style="list-style-type:none">
-        <li><a href="{% url 'apps' %}">Apps</a></li>
-        <li><p></p></li>
-        <li><a href="{% url 'devices' %}">Devices</a></li>
-        <li><p></p></li>
-        <li><a href="{% url 'internet' %}">Network & Internet</a></li>
-        <li><p></p></li>
-        <li><a href="{% url 'system' %}">System</a></li>
-        <li><p></p></li>
-        <li><a href="{% url 'tcn' %}">TCN</a></li>
-        <li><p></p></li>
-        <li><a href="{% url 'update&security' %}">Update & Security</a></li>
-    </ul>
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+
+<form method='get'>
+    <input name="q" type="text" placeholder="Search">
+</form>
+
+<ul style="list-style-type:none">
+    {% for item in object_list %}
+    <li>
+        {{item.name}}
+    </li>
+    {% endfor %}
+</ul>
+
+<ul class="menu menu-hover-lines" style="list-style-type:none">
+    <li><a href="{% url 'apps' %}">Apps</a></li>
+    <li><p></p></li>
+    <li><a href="{% url 'devices' %}">Devices</a></li>
+    <li><p></p></li>
+    <li><a href="{% url 'network&internet' %}">Network & Internet</a></li>
+    <li><p></p></li>
+    <li><a href="{% url 'system' %}">System</a></li>
+    <li><p></p></li>
+    <li><a href="{% url 'tcn' %}">TCN</a></li>
+    <li><p></p></li>
+    <li><a href="{% url 'update&security' %}">Update & Security</a></li>
+</ul>
+{% endblock %}
 
 
 

@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-    <p>Network & Internet is going here</p>
-        <ul style="list-style-type:none">
-        </ul>
+    <ul class="menu menu-hover-lines" style="list-style-type:none">
+        <p><a href="{% url 'bion' %}">BION</a></p>
+        <p><a href="{% url 'internet' %}">Internet</a></p>
+        <p><a href="{% url 'vpn' %}">VPN</a></p>
+    </ul>
 {% endblock %}

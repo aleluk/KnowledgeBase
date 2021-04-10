@@ -1,5 +1,4 @@
 .menu-hover-lines {
-
   text-align: center;
   text-transform: uppercase;
   font-weight: 500;
@@ -55,3 +54,7 @@
 .menu-hover-lines .active a::after {
   width: 100%;
 }
+
+/*ul {*/
+/*  list-style-type:none*/
+/*}*/

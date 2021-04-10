@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-    <p>System is going here</p>
-        <ul style="list-style-type:none">
-        </ul>
+    <ul style="list-style-type:none">
+        <p><a href="{% url 'network_drive' %}">Network Drives</a></p>
+        <p><a href="{% url 'performance' %}">Performance</a></p>
+        <p><a href="{% url 'rdp' %}">RDC (Remote Desktop Connection)</a></p>
+        <p><a href="{% url 'search' %}">Windows Search</a></p>
+    </ul>
 {% endblock %}
