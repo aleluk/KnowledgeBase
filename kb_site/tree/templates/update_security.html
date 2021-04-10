@@ -1,9 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
     <ul class="menu menu-hover-lines" style="list-style-type:none">
-         <p><a href="{% url 'antivirus' %}">Antivirus</a></p>
-         <p><a href="{% url 'bitlocker' %}">Bitlocker</a></p>
-         <p><a href="{% url 'feature_update' %}">Feature Update</a></p>
-         <p><a href="{% url 'windows_update' %}">Windows Update</a></p>
+        <li>
+            <p>Antivirus</p>
+            <p>Bitlocker</p>
+            <p>Feature Update</p>
+                <ul>
+                    <li>{{ about_2 }}</li>
+                    <li>{{ errors_2 }}</li>
+                </ul>
+            <p>Windows Update</p>
+            <p></p>
+                <ul>
+                    <li>About Windows Update</li>
+                        <ul>
+                            <li>What is Windows Update</li>
+                            <p>Here goes a description of everything about Windows Update</p>
+                        </ul>
+                    <li>Errors</li>
+                        <ul>
+                            <li>When to expect them?</li>
+                            <p>Here goes a description of errors that can be expected.</p>
+                        </ul>
+                </ul>
+        </li>
     </ul>
 {% endblock %}

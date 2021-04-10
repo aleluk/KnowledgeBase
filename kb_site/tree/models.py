@@ -53,27 +53,13 @@ class TCN(models.Model):
 
 class UpdateSecurity(models.Model):
     name = models.CharField(max_length=50)
+    description = models.TextField(default="no data")
 
     class Meta:
         verbose_name_plural = "UpdateSecurity"
 
     def __str__(self):
         return f"{self.name}"
-
-
-# class Index(models.Model):
-#     name = models.CharField(max_length=50)
-#     update_security_var = models.ForeignKey(UpdateSecurity, on_delete=models.CASCADE, null=True)
-#     apps_var = models.ForeignKey(Apps, on_delete=models.CASCADE, null=True)
-#     tcn_var = models.ForeignKey(TCN, on_delete=models.CASCADE, null=True)
-#     system_var = models.ForeignKey(System, on_delete=models.CASCADE, null=True)
-#     network_internet_var = models.ForeignKey(NetworkInternet, on_delete=models.CASCADE, null=True)
-#     devices_var = models.ForeignKey(Devices, on_delete=models.CASCADE, null=True)
-
-
-
-
-
 
 
 

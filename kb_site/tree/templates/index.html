@@ -1,17 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 
-<form method='get'>
-    <input name="q" type="text" placeholder="Search">
+<form action={% url 'search_results' %} method='GET'>
+        {{ form }}
 </form>
 
-<ul style="list-style-type:none">
-    {% for item in object_list %}
-    <li>
-        {{item.name}}
-    </li>
-    {% endfor %}
-</ul>
+<!--<ul style="list-style-type:none">-->
+<!--    {% for item in object_list %}-->
+<!--    <li>-->
+<!--        {{item.name}}-->
+<!--    </li>-->
+<!--    {% endfor %}-->
+<!--</ul>-->
 
 <ul class="menu menu-hover-lines" style="list-style-type:none">
     <li><a href="{% url 'apps' %}">Apps</a></li>
