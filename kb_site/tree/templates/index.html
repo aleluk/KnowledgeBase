@@ -1,32 +1,37 @@
 {% extends "base.html" %}
 {% block content %}
 
-<form action={% url 'search_results' %} method='GET'>
+<form action="index.html" method='get'>
         {{ form }}
 </form>
 
-<!--<ul style="list-style-type:none">-->
-<!--    {% for item in object_list %}-->
-<!--    <li>-->
-<!--        {{item.name}}-->
-<!--    </li>-->
-<!--    {% endfor %}-->
-<!--</ul>-->
 
 <ul class="menu menu-hover-lines" style="list-style-type:none">
-    <li><a href="{% url 'apps' %}">Apps</a></li>
+    <li><a href="{% url 'tree:apps' %}">Apps</a></li>
     <li><p></p></li>
-    <li><a href="{% url 'devices' %}">Devices</a></li>
+    <li><a href="{% url 'tree:devices' %}">Devices</a></li>
     <li><p></p></li>
-    <li><a href="{% url 'network&internet' %}">Network & Internet</a></li>
+    <li><a href="{% url 'tree:network&internet' %}">Network & Internet</a></li>
     <li><p></p></li>
-    <li><a href="{% url 'system' %}">System</a></li>
+    <li><a href="{% url 'tree:office365' %}">Office 365</a></li>
     <li><p></p></li>
-    <li><a href="{% url 'tcn' %}">TCN</a></li>
+    <li><a href="{% url 'tree:system' %}">System</a></li>
     <li><p></p></li>
-    <li><a href="{% url 'update&security' %}">Update & Security</a></li>
+    <li><a href="{% url 'tree:update&security' %}">Update & Security</a></li>
 </ul>
 {% endblock %}
+
+
+
+<!--<ul style="list-style-type:none">-->
+<!--    {% for item in object_list %}-->
+<!--        {% if item == q %}-->
+<!--    <li>-->
+<!--        {{ item.name}}-->
+<!--    </li>-->
+<!--        {% endif %}-->
+<!--    {% endfor %}-->
+<!--</ul>-->
 
 
 

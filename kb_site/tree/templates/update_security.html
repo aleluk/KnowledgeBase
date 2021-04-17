@@ -1,27 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
+<h3>Update & Security</h3>
     <ul class="menu menu-hover-lines" style="list-style-type:none">
         <li>
             <p>Antivirus</p>
             <p>Bitlocker</p>
+                <ul>
+                    <li>About</li>
+                    <li>Is it a new computer or fresh Windows install?</li>
+                          <ul>
+                              <li><a href="{% url 'tree:bitlocker_yes' %}">Yes</a></li>
+                              <li><a href="{% url 'tree:bitlocker_no' %}">No</a></li>
+                          </ul>
+                </ul>
             <p>Feature Update</p>
                 <ul>
-                    <li>{{ about_2 }}</li>
-                    <li>{{ errors_2 }}</li>
+                    <li><a href="{% url 'tree:fu_about' %}">About</a></li>
+                    <li><a href="{% url 'tree:fu_errors' %}">Errors</a></li>
                 </ul>
             <p>Windows Update</p>
-            <p></p>
                 <ul>
-                    <li>About Windows Update</li>
-                        <ul>
-                            <li>What is Windows Update</li>
-                            <p>Here goes a description of everything about Windows Update</p>
-                        </ul>
-                    <li>Errors</li>
-                        <ul>
-                            <li>When to expect them?</li>
-                            <p>Here goes a description of errors that can be expected.</p>
-                        </ul>
+                    <li><a href="{% url 'tree:wu_about' %}">About</a></li>
+                    <li><a href="{% url 'tree:wu_errors' %}">Errors</a></li>
                 </ul>
         </li>
     </ul>
