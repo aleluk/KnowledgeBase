@@ -5,6 +5,7 @@ from django.urls import reverse
 from django.views.generic import DetailView
 from django.views.generic import FormView, ListView, TemplateView, View
 from .forms import SearchForm
+from .models import UpdateSecurity
 
 
 def search(request):
@@ -14,12 +15,13 @@ def search(request):
 
 
 class WindowsUpdateAbout(TemplateView):
-    template_name = "windowsupdate_about.html"
+    template_name = 'update_security.html'
+    context = {'w_u_a': UpdateSecurity.objects.all()}
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["about_1"] = UpdateSecurityView.objects.get(id=1)
-        return context
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context["about_1"] = UpdateSecurityView.objects.get(id=1)
+    #     return context
 
 
 class WindowsUpdateErrors(TemplateView):

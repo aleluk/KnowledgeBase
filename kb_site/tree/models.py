@@ -1,7 +1,9 @@
+from django.contrib.postgres.search import SearchVectorField
 from django.db import models
 
 
 class UpdateSecurity(models.Model):
+    name = models.CharField(max_length=250, null=True)
     antivirus_about = models.TextField()
     antivirus_issues = models.TextField()
     bitlocker_about = models.TextField()
@@ -11,9 +13,26 @@ class UpdateSecurity(models.Model):
     fu_errors = models.TextField()
     wu_about = models.TextField()
     wu_errors = models.TextField()
+    vector = SearchVectorField(null=True)
 
     class Meta:
         verbose_name_plural = "UpdateSecurity"
+
+    def __str__(self):
+        return f"{self.name}"
+
+
+class Devices(models.Model):
+    name = models.CharField(max_length=250, null=True)
+    camera_yes = models.TextField()
+    camera_no = models.TextField()
+    printers = models.TextField()
+    sound_yes = models.TextField()
+    sound_no = models.TextField()
+    vector = SearchVectorField(null=True)
+
+    class Meta:
+        verbose_name_plural = "Devices"
 
     def __str__(self):
         return f"{self.name}"

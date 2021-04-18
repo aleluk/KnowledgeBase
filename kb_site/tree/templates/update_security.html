@@ -20,7 +20,9 @@
                 </ul>
             <p>Windows Update</p>
                 <ul>
-                    <li><a href="{% url 'tree:wu_about' %}">About</a></li>
+                    {% for i in w_u_a %}
+                        {{i}}
+                    {% endfor %}
                     <li><a href="{% url 'tree:wu_errors' %}">Errors</a></li>
                 </ul>
         </li>
